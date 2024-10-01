@@ -18,16 +18,16 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6 col-12 mx-auto">
-                <h3>Create a User</h3>
+                <h3>Update User</h3>
                 <hr />
-                <form:form method="post" action="/admin/user/create" modelAttribute="newUser">
-                    <div class="mb-3">
-                      <label  class="form-label">Email:</label>
-                      <form:input type="email" path="email" class="form-control"/>
+                <form:form method="post" action="/admin/user/update" modelAttribute="newUser">
+                    <div class="mb-3" style="display: none;">
+                        <label  class="form-label">Id: </label>
+                        <form:input type="text" path="id" class="form-control" />
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">Password:</label>
-                      <form:input type="password" path="password" class="form-control"/>
+                      <label  class="form-label">Email:</label>
+                      <form:input type="email" path="email" class="form-control" disabled="true"/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Phone number: </label>
@@ -41,7 +41,7 @@
                         <label class="form-label">Address:</label>
                         <form:input type="text" path="address" class="form-control"/>
                     </div>
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                   </form:form>
             </div>
         </div>
