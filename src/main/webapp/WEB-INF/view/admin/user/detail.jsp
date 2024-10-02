@@ -19,33 +19,34 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Delete User</h1>
+                        <h1 class="mt-4">Detail User</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item "> <a href="/admin">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Delete user</li>
+                            <li class="breadcrumb-item active">Detail User</li>
                         </ol>
                         <div class="">
                             <div class="row">
                                 <div class=" col-12 mx-auto">
                                     <div class="d-flex justify-content-between">
-                                        <h3>Delete User</h3>
+                                        <h3>User Details with id = ${id}</h3>
                                         
                                     </div>
                                     <hr/>
-                                    <div class="card" style="width: 60%;">
-                                    <div class="alter alter-danger">
-                                        Are you sure delete this user ?
-                                    </div>
-                                    
-                                    <form:form action="/admin/user/delete" method="post" modelAttribute="newUser"> 
-                                        <div class="mb-3" style="display: none;">
-                                            <label  class="form-label">Id: </label>
-                                            <form:input value="${id}" type="text" path="id" class="form-control" />
+                                    <div class="card" style="width: 18rem;">
+                                        <div class="card-header">
+                                            User information
                                         </div>
-                                        <button class="btn btn-danger">Confirm</button>
-                                    </form:form>
+                                        <ul class="list-group list-group-flush">
+                                          <li class="list-group-item">ID: ${user.id}</li>
+                                          <li class="list-group-item">Email: ${user.email}</li>
+                                          <li class="list-group-item">Full Name: ${user.fullName}</li>
+                                          <li class="list-group-item">Address: ${user.address} </li>
+                                        </ul>
+                                      </div>
+                                    <a href="/admin/user" class="btn btn-success">Back</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </main>
                 <jsp:include page="../layout/footer.jsp" />

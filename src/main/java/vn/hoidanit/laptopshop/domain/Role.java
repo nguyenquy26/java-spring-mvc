@@ -18,7 +18,7 @@ public class Role {
 
     private String name;
 
-    private String decsription;
+    private String description;
 
     // Role one to many
     @OneToMany(mappedBy = "role")
@@ -40,17 +40,17 @@ public class Role {
         this.name = name;
     }
 
-    public String getDecsription() {
-        return decsription;
+    public String getDescsription() {
+        return description;
     }
 
-    public void setDecsription(String decsription) {
-        this.decsription = decsription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
-        return "Role [id=" + id + ", name=" + name + ", decsription=" + decsription + "]";
+        return "Role [id=" + id + ", name=" + name + ", description=" + description + "]";
     }
 
 }
